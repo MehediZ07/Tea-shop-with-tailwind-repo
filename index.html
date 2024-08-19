@@ -13,18 +13,79 @@
     <style>
         /* Hide all items by default */
         .hidden-items-container .item,
-        #see_less {
+        .hidden-items-container .item_2,
+        .hidden-items-container .item_3,
+        #see_more_2,
+        #see_more_3,
+        #see_less,
+        #see_less_2,
+        #see_less_3 {
             display: none;
         }
 
-        /* Show all items when the checkbox is checked */
+        /* Show second row and second row's see more button*/
         #show_items:checked~.hidden-items-container .item,
+        #show_items:checked~#see_more_2 {
+            display: block;
+        }
+
+        /* First see more button hide  */
+        #show_items:checked~#see_more {
+            display: none;
+        }
+
+        /* Show third row and third row's see more button */
+        #show_items_2:checked~.hidden-items-container .item_2,
+        #show_items_2:checked~#see_more_3 {
+            display: block;
+        }
+
+        /* Second see more button hide */
+        #show_items_2:checked~#see_more_2 {
+            display: none;
+        }
+
+        /* Show forth row and forth row's see more button */
+        #show_items_3:checked~#see_more_3 {
+            display: none;
+        }
+
+        /* Third see more button hide */
+        #show_items_3:checked~.hidden-items-container .item_3 {
+            display: block;
+        }
+
+        /* Second and third see less button hide */
+        #show_items:checked~#see_less_2,
+        #show_items:checked~#see_less_3 {
+            display: none;
+        }
+
+        /* Show second row's see less button */
         #show_items:checked~#see_less {
             display: block;
         }
 
-        #show_items:checked~#see_more {
+        /* First and third see less button hide */
+        #show_items_2:checked~#see_less,
+        #show_items_2:checked~#see_less_3 {
             display: none;
+        }
+
+        /* Show third row's see less button */
+        #show_items_2:checked~#see_less_2 {
+            display: block;
+        }
+
+        /* First and second see less button hide */
+        #show_items_3:checked~#see_less,
+        #show_items_3:checked~#see_less_2 {
+            display: none;
+        }
+
+        /* Show forth row's see less button */
+        #show_items_3:checked~#see_less_3 {
+            display: block;
         }
     </style>
 </head>
@@ -109,7 +170,7 @@
                 <div
                     class="hidden-items-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-center text-center mt-8 ">
                     <div class="item px-4 py-6 bg-gray-100 rounded-lg space-y-2">
-                        <img class="mx-auto" src="images/tea-3.png" alt="">
+                        <img class="mx-auto" src="images/tea-2.png" alt="">
                         <h1 class="text-xl font-bold">Green Ice Tea</h1>
                         <p class="text-sm text-gray-500">Creamer could be replaced by fresh milk</p>
                     </div>
@@ -124,22 +185,96 @@
                         <p class="text-sm text-gray-500">Creamer could be replaced by fresh milk</p>
                     </div>
                     <div class="item px-4 py-6 bg-gray-100 rounded-lg space-y-2">
+                        <img class="mx-auto" src="images/tea-3.png" alt="">
+                        <h1 class="text-xl font-bold">Lemon Ice Tea</h1>
+                        <p class="text-sm text-gray-500">Creamer could be replaced by fresh milk</p>
+                    </div>
+                </div>
+
+                <input type="checkbox" id="show_items_2" class="hidden">
+                <!-- After first four items -->
+                <div
+                    class="hidden-items-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-center text-center mt-8 ">
+                    <div class="item_2 px-4 py-6 bg-gray-100 rounded-lg space-y-2">
+                        <img class="mx-auto" src="images/tea-3.png" alt="">
+                        <h1 class="text-xl font-bold">Green Ice Tea</h1>
+                        <p class="text-sm text-gray-500">Creamer could be replaced by fresh milk</p>
+                    </div>
+                    <div class="item_2 px-4 py-6 bg-gray-100 rounded-lg space-y-2">
+                        <img class="mx-auto" src="images/tea-1.png" alt="">
+                        <h1 class="text-xl font-bold">Strawberry Ice Tea</h1>
+                        <p class="text-sm text-gray-500">Creamer could be replaced by fresh milk</p>
+                    </div>
+                    <div class="item_2 px-4 py-6 bg-gray-100 rounded-lg space-y-2">
+                        <img class="mx-auto" src="images/tea-4.png" alt="">
+                        <h1 class="text-xl font-bold">Chocolate Ice Tea</h1>
+                        <p class="text-sm text-gray-500">Creamer could be replaced by fresh milk</p>
+                    </div>
+                    <div class="item_2 px-4 py-6 bg-gray-100 rounded-lg space-y-2">
                         <img class="mx-auto" src="images/tea-2.png" alt="">
                         <h1 class="text-xl font-bold">Lemon Ice Tea</h1>
                         <p class="text-sm text-gray-500">Creamer could be replaced by fresh milk</p>
                     </div>
                 </div>
 
+                <input type="checkbox" id="show_items_3" class="hidden">
+                <!-- After first four items -->
+                <div
+                    class="hidden-items-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-center text-center mt-8 ">
+                    <div class="item_3 px-4 py-6 bg-gray-100 rounded-lg space-y-2">
+                        <img class="mx-auto" src="images/tea-4.png" alt="">
+                        <h1 class="text-xl font-bold">Green Ice Tea</h1>
+                        <p class="text-sm text-gray-500">Creamer could be replaced by fresh milk</p>
+                    </div>
+                    <div class="item_3 px-4 py-6 bg-gray-100 rounded-lg space-y-2">
+                        <img class="mx-auto" src="images/tea-3.png" alt="">
+                        <h1 class="text-xl font-bold">Strawberry Ice Tea</h1>
+                        <p class="text-sm text-gray-500">Creamer could be replaced by fresh milk</p>
+                    </div>
+                    <div class="item_3 px-4 py-6 bg-gray-100 rounded-lg space-y-2">
+                        <img class="mx-auto" src="images/tea-2.png" alt="">
+                        <h1 class="text-xl font-bold">Chocolate Ice Tea</h1>
+                        <p class="text-sm text-gray-500">Creamer could be replaced by fresh milk</p>
+                    </div>
+                    <div class="item_3 px-4 py-6 bg-gray-100 rounded-lg space-y-2">
+                        <img class="mx-auto" src="images/tea-1.png" alt="">
+                        <h1 class="text-xl font-bold">Lemon Ice Tea</h1>
+                        <p class="text-sm text-gray-500">Creamer could be replaced by fresh milk</p>
+                    </div>
+                </div>
 
 
                 <label for="show_items"
-                    class="absolute left-1/2 transform -translate-x-1/2 mt-10 text-xl font-bold text-white px-6 py-4 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg cursor-pointer"
+                    class="absolute right-0 -mt-16 text-xl font-bold text-white px-6 py-4 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg cursor-pointer"
                     id="see_more">See
                     More</label>
 
+                <!-- Extra  -->
+                <label for="show_items_2"
+                    class="absolute right-0 -mt-8 text-xl font-bold text-white px-6 py-4 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg cursor-pointer"
+                    id="see_more_2">See
+                    More</label>
+
+                <label for="show_items_3"
+                    class="absolute right-0 mt-0 text-xl font-bold text-white px-6 py-4 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg cursor-pointer"
+                    id="see_more_3">See
+                    More</label>
+
+
+
                 <label for="show_items"
-                    class="absolute left-1/2 transform -translate-x-1/2 mt-10 text-xl font-bold text-white px-6 py-4 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg cursor-pointer"
+                    class="absolute left-0  -mt-8 text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-red-500 border-4 border-orange-500 px-[calc(1.5rem-4px)] py-[calc(1rem-4px)]  rounded-lg cursor-pointer"
                     id="see_less">See
+                    Less</label>
+
+                <label for="show_items_2"
+                    class="absolute left-0  mt-0 text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-red-500 border-4 border-orange-500 px-[calc(1.5rem-4px)] py-[calc(1rem-4px)]  rounded-lg cursor-pointer"
+                    id="see_less_2">See
+                    Less</label>
+
+                <label for="show_items_3"
+                    class="absolute left-0  mt-8 text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-red-500 border-4 border-orange-500 px-[calc(1.5rem-4px)] py-[calc(1rem-4px)]  rounded-lg cursor-pointer"
+                    id="see_less_3">See
                     Less</label>
             </div>
         </div>
